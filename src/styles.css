@@ -17,9 +17,9 @@
 html, body, #root { height: 100%; }
 body { background: #0f1f17; font-family: "Oak Sans", system-ui, sans-serif; color: var(--crema); overflow: hidden; }
 
-.escenario { position: fixed; inset: 0; display: grid; place-items: center; }
+.escenario { position: fixed; inset: 0; overflow: hidden; }
 .lienzo {
-  position: relative; width: 1920px; height: 1080px; flex: none; overflow: hidden;
+  position: absolute; left: 50%; top: 50%; margin: -540px 0 0 -960px; width: 1920px; height: 1080px; overflow: hidden;
   transform-origin: center; background: var(--verde-osc);
   background-image:
     radial-gradient(1200px 700px at 85% 0%, rgba(156,168,103,.28), transparent 60%),
