@@ -1,0 +1,12 @@
+{
+  "lastQuery": "quiero que dejes listo el repo para que se pueda desplegar en vercel",
+  "perAgentQuery": {},
+  "graftReads": 0,
+  "sourceReads": 0,
+  "savedTokens": 0,
+  "injectedPointers": [],
+  "nudges": 0,
+  "inputCostMicros": 93347,
+  "inputTokensBilled": 157366,
+  "lastBillingUuid": "94a62ea4-40c7-4ba4-91d5-555f26062f7b"
+}
