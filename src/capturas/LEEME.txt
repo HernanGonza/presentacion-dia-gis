@@ -1,0 +1,6 @@
+Poné acá las capturas (png/jpg/webp), con el nombre exacto que figura en
+src/slides.data.js (campo "captura") y en GUION.md. Ejemplo:
+  alerta-temprana/pronostico.png
+  ecodatos/mapa-reportes.png
+Mientras falte un archivo, la diapositiva muestra un marco con el nombre esperado.
+Después de agregarlas: npm run build  (se embeben en dist/index.html).
