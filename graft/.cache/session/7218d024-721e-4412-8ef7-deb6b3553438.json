@@ -1,0 +1,12 @@
+{
+  "lastQuery": "no, el visor de mapas no funciona",
+  "perAgentQuery": {},
+  "graftReads": 0,
+  "sourceReads": 0,
+  "savedTokens": 0,
+  "injectedPointers": [],
+  "nudges": 0,
+  "inputCostMicros": 488816,
+  "inputTokensBilled": 1493704,
+  "lastBillingUuid": "72d0e8c8-21c7-48dc-958a-6b1a51cfec06"
+}
