@@ -158,3 +158,14 @@ body { background: #0f1f17; font-family: "Oak Sans", system-ui, sans-serif; colo
 @media (prefers-reduced-motion: reduce) { .foco-aro { animation: none; opacity: .3; } }
 .centro .chico p { margin: 0; }
 .centro .chico { display: flex; flex-direction: column; gap: 6px; font-size: 26px; letter-spacing: .12em; text-transform: uppercase; color: var(--verde-cl); margin-top: 20px; }
+.marco.contener img { object-fit: contain; object-position: center; background: #0b1812; }
+
+.mosaico h2 { margin-bottom: 26px; font-size: 64px; }
+.mosaico-grid { flex: 1; min-height: 0; display: grid; gap: 36px; align-content: center; grid-template-columns: repeat(3, 1fr); }
+.mosaico.n2 .mosaico-grid { grid-template-columns: repeat(2, 1fr); }
+.mosaico-grid figure { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.mosaico-grid .marco { width: 100%; }
+.mosaico-grid figcaption { display: flex; flex-direction: column; gap: 6px; }
+.mosaico-grid figcaption b { font-size: 34px; color: var(--amarillo); font-weight: 600; }
+.mosaico-grid figcaption span { font-size: 28px; font-weight: 300; line-height: 1.3; opacity: .92; }
+.mosaico.n3 figcaption b { font-size: 30px; } .mosaico.n3 figcaption span { font-size: 25px; }

@@ -34,10 +34,10 @@ function CapaFocos({ puntos }) {
   );
 }
 
-function Captura({ ruta, capas }) {
+function Captura({ ruta, capas, contener }) {
   const src = imagenDe(ruta);
   return (
-    <div className="marco">
+    <div className={contener ? "marco contener" : "marco"}>
       <div className="marco-barra">
         <i /> <i /> <i />
         <span>{ruta.split("/").pop()}</span>
@@ -71,7 +71,7 @@ function PlacaImg({ ruta }) {
 function Slide({ s, n, total }) {
   const pie = (
     <div className="pie">
-      <span>{s.tipo === "captura" || s.tipo === "texto" || s.tipo === "flujo" ? "Sistemas de Información Geográfica" : ""}</span>
+      <span>{s.tipo === "captura" || s.tipo === "mosaico" || s.tipo === "texto" || s.tipo === "flujo" ? "Sistemas de Información Geográfica" : ""}</span>
       <span>
         {n} / {total}
       </span>
@@ -152,6 +152,24 @@ function Slide({ s, n, total }) {
           {pie}
         </div>
       );
+ case "mosaico":
+      return (
+        <div className={`slide mosaico n${s.items.length}`}>
+          <h2 className="reveal">
+            {s.titulo}
+            {s.url && <small className="url">{s.url}</small>}
+          </h2>
+          <div className="mosaico-grid">
+            {s.items.map((it, i) => (
+              <figure className="reveal" key={i}>
+                <Captura ruta={it.src} capas={it.capas} contener={it.contener} />
+                <figcaption><b>{it.leyenda}</b><span>{it.texto}</span></figcaption>
+              </figure>
+            ))}
+          </div>
+          {pie}
+        </div>
+      );
     case "captura":
       return (
         <div className="slide captura">
@@ -161,7 +179,7 @@ function Slide({ s, n, total }) {
           </h2>
           <div className="cuerpo">
             <div className="reveal grande">
-              <Captura ruta={s.captura} capas={s.capas} />
+              <Captura ruta={s.captura} capas={s.capas} contener={s.contener} />
             </div>
             <ol className="lista">
               {s.puntos.map((p, i) => (
