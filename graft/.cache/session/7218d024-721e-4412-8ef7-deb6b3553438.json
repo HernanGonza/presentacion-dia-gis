@@ -8,5 +8,6 @@
   "nudges": 0,
   "inputCostMicros": 1294171,
   "inputTokensBilled": 5011928,
-  "lastBillingUuid": "aa65da0c-a3e8-43c3-ac4c-a421c56d4b27"
+  "lastBillingUuid": "aa65da0c-a3e8-43c3-ac4c-a421c56d4b27",
+  "summarized": true
 }
